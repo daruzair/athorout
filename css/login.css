@@ -1,0 +1,218 @@
+* {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+  user-select: none;
+}
+html {
+}
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+}
+img {
+  width: 100%;
+}
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  cursor: url("23611-7-sun-removebg-preview-removebg-preview.png") 25 25, auto;
+}
+.container {
+  width: 60%;
+  height: 75%;
+  position: relative;
+}
+.row {
+  width: 100%;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.col {
+  width: 50%;
+  float: left;
+  height: 100%;
+}
+.form {
+  transition: 1.5s all ease-in;
+  height: 100%;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.199);
+  cursor: default;
+  backface-visibility: hidden;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.left form > div {
+  margin-top: 20px;
+  border: 1px solid gray;
+  height: 40px;
+  border-radius: 30px;
+  padding: 10px 5px;
+}
+.left form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: 70%;
+  text-align: center;
+}
+.left form div input {
+  width: 80%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding-left: 5px;
+  background-color: transparent;
+}
+.left form div i {
+  color: #505050;
+  transition: all 0.5s cubic-bezier(0.35, 0.99, 1, -1.57);
+}
+
+.left > form > div:nth-last-child(2) {
+  width: 40%;
+  cursor: pointer;
+  padding: 0;
+  background-color: #0098fd;
+  border: none;
+}
+.left > form > div:nth-last-child(2) input {
+  cursor: pointer;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+}
+.social-links {
+  transform-style: preserve-3d;
+  background-color: transparent;
+  border: none !important;
+}
+.social-links i {
+  cursor: pointer;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  padding: 10px;
+  border: 1px solid #808080;
+  color: #505050;
+}
+
+.social-links i:hover {
+  box-shadow: 0px 5px 10px 2px rgba(128, 128, 128, 0.603);
+  transform: scale(1.1);
+}
+.left > form > div:nth-last-child(2) input:hover {
+  background-color: rgba(0, 0, 0, 0.068);
+}
+.left > form > div:focus-within {
+  border: 1px solid blue;
+}
+.right {
+  color: white;
+  height: 100%;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  z-index: 2;
+}
+.right h2 {
+  margin-top: 50px;
+}
+.right p {
+  font-size: 1rem;
+  width: 40ch;
+}
+.right > div.row {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right button {
+  border: none;
+  color: white;
+  outline: none;
+  border: 1px dashed black;
+  background-color: transparent;
+  font-size: 1rem;
+  padding: 7px 25px;
+  border-radius: 35px;
+  margin-top: 1.8rem;
+  cursor: pointer;
+}
+.right button:hover {
+  background-color: rgba(0, 0, 0, 0.055);
+}
+
+.right img {
+  width: 50%;
+  margin-top: 1.8rem;
+  margin-left: 3rem;
+}
+.form {
+  position: absolute;
+}
+.form::after {
+  content: "";
+  background-color: #0098fd;
+  width: 1000px;
+  height: 1000px;
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  top: -400px;
+  right: -650px;
+  z-index: -1;
+  clip-path: polygon(0% 40%, 35% 40%, 35% 88%, 0% 88%);
+}
+.signup {
+  transform: perspective(800px) rotateY(180deg);
+}
+.login-form {
+  transform: perspective(800px) rotateY(0deg);
+}
+.form {
+  transform-style: preserve-3d;
+}
+.signup img {
+  transition: 0.7s all ease-in;
+  transform: unset;
+}
+.login-form img {
+  transition: 0.7s all ease-in;
+  transform: translateZ(100px);
+}
+
+.signup-mode .signup {
+  transform: perspective(800px) rotateY(360deg);
+}
+.signup-mode .login-form {
+  transform: perspective(800px) rotateY(180deg);
+}
+
+.signup-mode .signup img {
+  transform: translateZ(100px);
+}
+.signup-mode .login-form img {
+  transform: unset;
+}
